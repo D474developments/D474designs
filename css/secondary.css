@@ -1,0 +1,125 @@
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    #789788,
+    limeGreen,
+    #264878,
+    #315687,
+    #789156,
+    #481654
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.ball {
+  animation: float 3.5s ease-in-out infinite;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+
+  background: radial-gradient(
+    circle at 75% 30%,
+    white 5px,
+    aqua 8%,
+    darkblue 60%,
+    aqua 100%
+  );
+  box-shadow: inset 0 0 20px #879456, inset 10px 0 46px #897716,
+    inset 88px 0px 60px #c2d8fe, inset -20px -60px 100px #fde9ea,
+    inset 0 50px 140px #fde9ea, 0 0 90px #fff;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-80px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.shadow {
+  background: #b490b2;
+  width: 150px;
+  height: 40px;
+  top: 70%;
+  animation: expand 3.5s infinite;
+  position: absolute;
+  border-radius: 50%;
+}
+@keyframes expand {
+  0%,
+  100% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .ball {
+    animation: float 4s ease-in-out infinite;
+    height: 120px;
+    width: 120px;
+
+    background: radial-gradient(
+      circle at 65% 35%,
+      white 5px,
+      aqua 15%,
+      darkblue 50%,
+      aqua 100%
+    );
+    box-shadow: inset 0 -20px 30px #fff, inset 40px 0 46px #eaf5fc,
+      inset 58px 0px 60px #c2d8fe, inset -8px -30px 100px #fde9ea,
+      inset 0 20px 110px #fde9ea, 0 0 90px #fff;
+  }
+  .shadow {
+    width: 90px;
+    height: 20px;
+    top: 78%;
+    animation: expand 4s infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-50px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+.dailyVersesWrapper {
+  color: red;
+  text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+}
+
+/*
+Copyright (c) 2021 by Jelilicent (https://codepen.io/Jelilicent/pen/oNzPjEo)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
